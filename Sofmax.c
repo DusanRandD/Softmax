@@ -17,6 +17,7 @@ float expo(float y){
 float Softmax(float x){
     float Sum=0;
     for(i=0;i<Iter;i++) Sum+=expo(Niz[i]);
+    if(Sum==0) Sum=0.001;
     return (expo(x))/Sum;
 }
 
